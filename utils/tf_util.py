@@ -120,12 +120,6 @@ def local_feature(inputs, num_output_channels, bn, is_training, idx, bn_decay, w
     inputs: 4-D tensor BxNx3neighborx3Dim
     """
     batch_size, num_points, num_neighbors, num_c = inputs.shape
-    vec_length = inputs * inputs
-    vec_length = tf.reduce_sum(vec_length, axis=3, keep_dims=True)
-    vec_length = tf.reduce_sum(vec_length, axis=2, keep_dims=True)
-    vec_length = tf.sqrt(vec_length)
-    vec_length = tf.tile(vec_length, [1, 1, inputs.shape[2], inputs.shape[3]])
-    inputs = inputs / (vec_length + 1e-10)
     local_feature = conv2d(inputs, 3*num_output_channels, [1, 1], padding='VALID', stride=[1, 1], bn=bn, is_training=is_training, scope='local%d'%(idx), bn_decay=bn_decay, weight_decay=weight_decay, activation_fn=None)
     local_feature = tf.reshape(local_feature, [batch_size, num_points, num_neighbors, 3, num_output_channels])
     local_feature = tf.reduce_max(local_feature, axis=3)
