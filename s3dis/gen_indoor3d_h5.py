@@ -74,14 +74,14 @@ def insert_batch(data, label, last_batch=False):
 sample_cnt = 0
 for i, data_label_filename in enumerate(data_label_files):
     print(data_label_filename)
-    data, label = indoor3d_util.room2blocks_wrapper_normalized(data_label_filename, NUM_POINT, block_size=1.0, stride=0.5,
+    #data, label = indoor3d_util.room2blocks_wrapper_normalized(data_label_filename, NUM_POINT, block_size=1.0, stride=0.5,
+    #                                             random_sample=False, sample_num=None)
+    if data_label_filename.split("/")[-1][:6] != "Area_5":
+        data, label = indoor3d_util.room2blocks_wrapper_normalized(data_label_filename, NUM_POINT, block_size=1.0, stride=0.3,
                                                  random_sample=False, sample_num=None)
-    #if data_label_filename.split("/")[-1][:6] != "Area_5":
-    #    data, label = indoor3d_util.room2blocks_wrapper_normalized(data_label_filename, NUM_POINT, block_size=1.0, stride=0.2,
-    #                                             random_sample=False, sample_num=None)
-    #else:
-    #    data, label = indoor3d_util.room2blocks_wrapper_normalized(data_label_filename, NUM_POINT, block_size=1.0, stride=0.5,
-    #                                             random_sample=False, sample_num=None)
+    else:
+        data, label = indoor3d_util.room2blocks_wrapper_normalized(data_label_filename, NUM_POINT, block_size=1.0, stride=0.5,
+                                                 random_sample=False, sample_num=None)
     print('{0}, {1}'.format(data.shape, label.shape))
     for _ in range(data.shape[0]):
         fout_room.write(os.path.basename(data_label_filename)[0:-4]+'\n')
