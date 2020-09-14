@@ -79,7 +79,7 @@ def gen_pickle(split="val", root="DataSet/Scannet_v2"):
 
 
 if __name__ == '__main__':
-    root = "/home/xujiachen/pc_data/scannet/scannet_v2"  # modify this path to your Scannet v2 dataset Path
+    root = "/home/xxx/pc_data/scannet/scannet_v2"  # modify this path to your Scannet v2 dataset Path
 #    gen_pickle(split='train', root=root)
 #    gen_pickle(split='val', root=root)
     gen_pickle(split='test', root=root)

@@ -13,7 +13,7 @@ sys.path.append(BASE_DIR)
 sys.path.append(os.path.join(BASE_DIR, 'models'))
 sys.path.append(os.path.join(BASE_DIR, 'utils'))
 sys.path.append(os.path.join(BASE_DIR, 'scannet'))
-sys.path.append('/home/gongjingyu/gcode/RGBD/data/S3DIS')
+sys.path.append('/home/home/gcode/RGBD/data/S3DIS')
 import provider
 import tf_util
 import scannet_dataset_rgb
@@ -134,10 +134,10 @@ class MyData():
         return np.load(self.sample_list[index])
     def __len__(self):
         return len(self.sample_list)
-train_data = MyData(51182, '/all-data/sv3-disk2/gongjingyu_home/gcode/RGBD/dataset/S3DIS/indoor3d_sem_seg_hdf5_data_v7_npy/train_data')
-train_label = MyData(51182, '/all-data/sv3-disk2/gongjingyu_home/gcode/RGBD/dataset/S3DIS/indoor3d_sem_seg_hdf5_data_v7_npy/train_label')
-test_data = MyData(8334, '/all-data/sv3-disk2/gongjingyu_home/gcode/RGBD/dataset/S3DIS/indoor3d_sem_seg_hdf5_data_v7_npy/test_data')
-test_label = MyData(8334, '/all-data/sv3-disk2/gongjingyu_home/gcode/RGBD/dataset/S3DIS/indoor3d_sem_seg_hdf5_data_v7_npy/test_label')
+train_data = MyData(51182, '/all-data/sv3-disk2/home/gcode/RGBD/dataset/S3DIS/indoor3d_sem_seg_hdf5_data_v7_npy/train_data')
+train_label = MyData(51182, '/all-data/sv3-disk2/home/gcode/RGBD/dataset/S3DIS/indoor3d_sem_seg_hdf5_data_v7_npy/train_label')
+test_data = MyData(8334, '/all-data/sv3-disk2/home/gcode/RGBD/dataset/S3DIS/indoor3d_sem_seg_hdf5_data_v7_npy/test_data')
+test_label = MyData(8334, '/all-data/sv3-disk2/home/gcode/RGBD/dataset/S3DIS/indoor3d_sem_seg_hdf5_data_v7_npy/test_label')
 num_test_data = int(test_data.shape[0] // 4)
 class_sample_number = [13415141, 12095149, 10941972,  1258616,   963770,   810160, 2760541,  1961664,  2613820,   280297,  2112759,  436227, 6372578]
 class_sample_number = np.array(class_sample_number).astype(np.float32)

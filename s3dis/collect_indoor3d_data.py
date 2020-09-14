@@ -15,7 +15,7 @@ if not os.path.exists(output_folder):
 # Note: there is an extra character in the v1.2 data in Area_5/hallway_6. It's fixed manually.
 for anno_path in anno_paths:
     print(anno_path)
-    if anno_path != "/all-data/hcp-disk1/gongjingyu_home/gcode/RGBD/dataset/Stanford3dDataset_v1.2/Area_5/office_19/Annotations":
+    if anno_path != "/all-data/hcp-disk1/home/gcode/RGBD/dataset/Stanford3dDataset_v1.2/Area_5/office_19/Annotations":
         continue
     try:
         elements = anno_path.split('/')

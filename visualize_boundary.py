@@ -29,7 +29,7 @@ parser.add_argument('--model', default='pointconv_weight_density_n16_GPU3', help
 parser.add_argument('--batch_size', type=int, default=8, help='Batch Size during training [default: 8]')
 parser.add_argument('--num_point', type=int, default=8192, help='Point Number [256/512/1024/2048] [default: 8192]')
 parser.add_argument('--model_path', default='pointconv_scannet_2020_01_05_22_00_54/best_model_epoch_1412.ckpt', help='model checkpoint file path [default: log/model.ckpt]')
-parser.add_argument('--ply_path', default='/home/gongjingyu/data/ScanNet/scans', help='ply path from original Scannet')
+parser.add_argument('--ply_path', default='/home/data/ScanNet/scans', help='ply path from original Scannet')
 parser.add_argument('--dump_dir', default='dump', help='dump folder path [dump]')
 parser.add_argument('--num_votes', type=int, default=5, help='Aggregate classification scores from multiple rotations [default: 5]')
 parser.add_argument('--with_rgb',help='With rgb or not', action='store_true')
