@@ -1,9 +1,3 @@
-""" Utility functions for processing point clouds.
-
-Author: Charles R. Qi, Hao Su
-Date: November 2016
-"""
-
 import os
 import sys
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))

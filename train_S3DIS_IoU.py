@@ -1,8 +1,3 @@
-"""
-Modified from PointNet++: https://github.com/charlesq34/pointnet2
-Author: Wenxuan Wu
-Date: July 2018
-"""
 import argparse
 import math
 import h5py

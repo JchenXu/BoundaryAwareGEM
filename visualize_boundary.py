@@ -1,9 +1,3 @@
-"""
-Evaluation on ScanNet: Generalize neccenary .ply and .txt file
-Author: Wenxuan Wu
-Date: July 2018
-"""
-
 import argparse
 import math
 from datetime import datetime

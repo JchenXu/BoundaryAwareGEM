@@ -1,10 +1,3 @@
-"""
-ScanNet v2 data preprocessing.
-Extract point clouds data from .ply files to genrate .pickle files for training and testing.
-Author: Wenxuan Wu
-Date: July 2018
-"""
-
 import os
 import sys
 import numpy as np

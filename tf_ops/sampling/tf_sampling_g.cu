@@ -1,9 +1,3 @@
-/* Furthest point sampling GPU implementation
- * Original author: Haoqiang Fan
- * Modified by Charles R. Qi
- * All Rights Reserved. 2017. 
- */
-
 __global__ void cumsumKernel(int b,int n,const float * __restrict__ inp,float * __restrict__ out){
   const int BlockSize=2048;
   const int paddingLevel=5;

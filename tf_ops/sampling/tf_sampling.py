@@ -1,8 +1,3 @@
-''' Furthest point sampling
-Original author: Haoqiang Fan
-Modified by Charles R. Qi
-All Rights Reserved. 2017. 
-'''
 import tensorflow as tf
 from tensorflow.python.framework import ops
 import sys
