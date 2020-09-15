@@ -23,5 +23,16 @@ CUDA_VISIBLE_DEVICES=0 python evaluate_scannet.py --model bagem_scannet --batch_
 
 Modify the model_path to your .ckpt file path.
 
+### S3DIS DataSet Segmentation
+
+Download the S3DIS dataset from [here](http://buildingparser.stanford.edu/dataset.html), and see `s3dis/README` for details of preprocessing.
+
+To train and eval a model to segment S3DIS Scenes:
+
+```
+CUDA_VISIBLE_DEVICES=0 python train_S3DIS_IoU.py --model bagem_s3dis --log_dir bagem_s3dis_ --batch_size 12
+```
+
+
 ## License
 This repository is released under MIT License (see LICENSE file for details).
