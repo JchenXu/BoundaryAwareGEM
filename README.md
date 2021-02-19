@@ -29,10 +29,11 @@ After training, to evaluate the segmentation IoU accuracies:
 CUDA_VISIBLE_DEVICES=0 python evaluate_scannet.py --model bagem_scannet --batch_size 8 --model_path bagem_scannet_%s --with_rgb 
 ```
 
-###S3DIS DataSet Segmentation
-Incoming :)
-
 Modify the model_path to your .ckpt file path.
+
+###S3DIS DataSet Segmentation
+
+Incoming :)
 
 ## License
 This repository is released under MIT License (see LICENSE file for details).
