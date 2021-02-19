@@ -31,7 +31,7 @@ CUDA_VISIBLE_DEVICES=0 python evaluate_scannet.py --model bagem_scannet --batch_
 
 Modify the model_path to your .ckpt file path.
 
-###S3DIS DataSet Segmentation
+### S3DIS DataSet Segmentation
 
 Incoming :)
 
