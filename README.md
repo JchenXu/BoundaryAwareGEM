@@ -1,4 +1,7 @@
-# BoundaryAwareGEM
+# Boundary-Aware Geometric Encoding for Semantic Segmentation of Point Clouds
+by Jingyu Gong*, JiachenXu*, Xin Tan, Jie Zhou, Yanyun Qu, Yuan Xie and Lizhuang Ma. (*=equal contribution)
+
+<p align="center"> <img src="imgs/framework.jpg" width="80%"> </p>
 
 ## Installation
 The code is based on [PointNet](https://github.com/charlesq34/pointnet)，[PointNet++](https://github.com/charlesq34/pointnet2), and [PointConv](https://github.com/DylanWusee/pointconv). Please install [TensorFlow](https://www.tensorflow.org/install/), and follow the instruction in [PointNet++](https://github.com/charlesq34/pointnet2) to compile the customized TF operators.  
